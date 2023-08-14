@@ -7,6 +7,6 @@ import com.example.snsproject.R
 class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_page)
+        setContentView(R.layout.activity_main)
     }
 }
