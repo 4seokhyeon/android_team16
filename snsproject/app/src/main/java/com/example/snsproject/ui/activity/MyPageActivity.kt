@@ -11,7 +11,7 @@ class MyPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_page)
 
-        val listview = findViewById<ListView>(R.id.mypage_listview)
-        listview.adapter = MyPageItemAdapter(this, ArrayList<Any>())
+//        val listview = findViewById<ListView>(R.id.mypage_listview)
+//        listview.adapter = MyPageItemAdapter(this, ArrayList<Any>())
     }
 }
