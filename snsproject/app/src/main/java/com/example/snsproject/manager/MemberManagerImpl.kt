@@ -137,9 +137,17 @@ class MemberManagerImpl private constructor() : MemberManager {
         mbti: String,
         profileImg: String,
         status: String,
-        postList: MutableList<Post>
+        post: MutableList<Post>
     ): Boolean {
-        TODO("Not yet implemented")
+        val idx = findMemberIndexOf(id)
+
+        if (idx == -1) {
+            return false
+        }
+
+        memberList[idx] = Member(id, pw, name, mbti, profileImg, status, post)
+
+        return true
     }
 
     companion object {

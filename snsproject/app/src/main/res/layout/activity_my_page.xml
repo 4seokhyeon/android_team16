@@ -32,7 +32,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_id"
+            android:id="@+id/mypage_tv_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="250dp"
@@ -43,35 +43,35 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="250dp"
-            android:layout_marginTop="10dp"
-            android:text="MBTI"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_id" />
-
-        <TextView
-            android:id="@+id/tv_mbti"
+            android:id="@+id/mypage_tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="250dp"
             android:layout_marginTop="10dp"
             android:text="NAME"
-
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+            app:layout_constraintTop_toBottomOf="@+id/mypage_tv_id" />
 
         <TextView
-            android:id="@+id/tv_status"
+            android:id="@+id/mypage_tv_mbti"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="10dp"
+            android:text="MBTI"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mypage_tv_name" />
+
+        <TextView
+            android:id="@+id/mypage_tv_status"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="250dp"
             android:layout_marginTop="10dp"
             android:text="STATUS"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_mbti" />
+            app:layout_constraintTop_toBottomOf="@+id/mypage_tv_mbti" />
 
         <TextView
             android:id="@+id/textView10"
@@ -93,10 +93,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/ic_exit_icon_foreground" />
+            app:srcCompat="@drawable/ic_exit_icon_foreground"
+            android:contentDescription="back" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/mypage_modify_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
@@ -111,6 +112,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ListView
+        android:paddingTop="20dp"
         android:id="@+id/mypage_listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
