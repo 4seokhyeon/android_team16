@@ -37,19 +37,21 @@
         android:id="@+id/imageView"
         android:layout_width="46dp"
         android:layout_height="41dp"
-        android:layout_marginStart="26dp"
+        android:layout_marginStart="24dp"
         android:layout_marginEnd="180dp"
         android:layout_marginBottom="11dp"
         app:layout_constraintBottom_toBottomOf="@+id/tb_main"
         app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tb_main"
         app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/presence_online" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="458dp"
+        android:layout_height="115dp"
         android:background="#EEEEEE"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,110 +59,159 @@
         app:layout_constraintTop_toBottomOf="@+id/tb_main">
 
         <LinearLayout
+            android:id="@+id/main_page_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+            <View
+                android:layout_width="50dp"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/my_img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/round_img_button"
+                    android:clipToOutline="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sukhyun" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="20dp"
+                    android:text="Name"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
 
-            <ImageButton
-                android:id="@+id/im1"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/round_img_button"
-                android:clipToOutline="true"
-                android:scaleType="centerInside"
-                android:src="@drawable/sukhyun" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/round_img_button"
-                android:clipToOutline="true"
-                android:padding="5dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/dakyum" />
+                <ImageButton
+                    android:id="@+id/per1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/round_img_button"
+                    android:clipToOutline="true"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/dakyum" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
             <View
                 android:layout_width="8dp"
                 android:layout_height="match_parent" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/round_img_button"
-                android:clipToOutline="true"
-                android:scaleType="centerInside"
-                android:src="@drawable/hyemyung" />
+                <ImageButton
+                    android:id="@+id/per2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/round_img_button"
+                    android:clipToOutline="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/hyemyung" />
 
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/round_img_button"
-                android:clipToOutline="true"
-                android:scaleType="centerInside"
-                android:src="@drawable/keuntae" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Name"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/round_img_button"
-                android:clipToOutline="true"
-                android:scaleType="centerInside"
-                android:src="@drawable/kwanghee" />
 
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/round_img_button"
-                android:clipToOutline="true" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <View
-                android:layout_width="8dp"
-                android:layout_height="match_parent" />
+                <ImageButton
+                    android:id="@+id/per3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/round_img_button"
+                    android:clipToOutline="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/keuntae" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Name"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/per4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/round_img_button"
+                    android:clipToOutline="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/kwanghee" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Name"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>
 
-    <ScrollView
-        android:layout_width="455dp"
-        android:layout_height="612dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <ListView
+        android:id="@+id/main_page_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-          <ListView
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              app:layout_constraintBottom_toBottomOf="parent"
-              app:layout_constraintLeft_toLeftOf="parent"
-              app:layout_constraintRight_toRightOf="parent"
-              app:layout_constraintTop_toTopOf="parent">
-
-          </ListView>
-
-
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
