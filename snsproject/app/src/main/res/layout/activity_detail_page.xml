@@ -30,7 +30,7 @@
             >
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/detail_Undo_Btn"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="16dp"
@@ -40,7 +40,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/detail_textview"
+                android:id="@+id/detail_TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -52,84 +52,205 @@
 
 
         </androidx.appcompat.widget.Toolbar>
-        <LinearLayout
-
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_Layout"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:baselineAligned="false"
             android:background="@color/detail_background"
             >
-
-            <ImageView
-                android:id="@+id/Detail_Img"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/detail_img"
+                android:layout_margin="32dp"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="50dp"
-                android:baseline="100dp"
 
-                app:srcCompat="@drawable/dakyum" />
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                app:civ_border_overlay="true"
+                app:civ_border_color="#000000"
+                app:civ_border_width="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/Detail_Img"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_marginStart="30dp"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:baseline="100dp"-->
+
+<!--                app:srcCompat="@drawable/kwanghee" />-->
 
             <TextView
-                android:id="@+id/Detail_introText"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="32dp" />
+                android:id="@+id/detail_IDText"
+                android:text="ID : "
+                android:textSize="30dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="120dp"
+                app:layout_constraintStart_toEndOf="@id/detail_img"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+            <TextView
+                android:id="@+id/detail_NameText"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="120dp"
+                app:layout_constraintStart_toEndOf="@id/detail_img"
+                app:layout_constraintTop_toBottomOf="@id/detail_IDText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+            <TextView
+                android:id="@+id/detail_MBTIText"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="80dp"
+                app:layout_constraintStart_toEndOf="@id/detail_img"
+                app:layout_constraintTop_toBottomOf="@id/detail_NameText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+            <TextView
+                android:id="@+id/detail_StatusText"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="40dp"
+
+                app:layout_constraintStart_toEndOf="@id/detail_img"
+                app:layout_constraintTop_toBottomOf="@id/detail_MBTIText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/detail_IDInputText"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginBottom="120dp"
+                app:layout_constraintStart_toEndOf="@id/detail_img"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+            <TextView
+                android:id="@+id/detail_NameInputText"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginBottom="120dp"
+                app:layout_constraintStart_toEndOf="@id/detail_img"
+                app:layout_constraintTop_toBottomOf="@id/detail_IDText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+            <TextView
+                android:id="@+id/detail_MBTIInputText"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginBottom="80dp"
+                app:layout_constraintStart_toEndOf="@id/detail_img"
+                app:layout_constraintTop_toBottomOf="@id/detail_NameText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+            <TextView
+                android:id="@+id/detail_StatusInputText"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginBottom="40dp"
+
+                app:layout_constraintStart_toEndOf="@id/detail_img"
+                app:layout_constraintTop_toBottomOf="@id/detail_MBTIText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
 
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-
-    <ScrollView
+    <ListView
+        android:id="@+id/detail_listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayoutCompat">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat"></ListView>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical">
-
-            <androidx.constraintlayout.utils.widget.ImageFilterView
-                android:id="@+id/detail_mainImgView1"
-                android:layout_width="300dp"
-                android:layout_height="100dp"
-                android:layout_margin="50dp"
-                android:background="@drawable/feed"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+    <!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/linearLayoutCompat">-->
 
 
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:orientation="vertical">-->
 
-            <TextView
-                android:layout_width="300dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/detail_mainImgView" />
-
-            <androidx.constraintlayout.utils.widget.ImageFilterView
-                android:id="@+id/detail_mainImgView2"
-                android:layout_width="300dp"
-                android:layout_height="100dp"
-                android:layout_margin="50dp"
-                android:background="@drawable/feed"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+<!--            <androidx.constraintlayout.utils.widget.ImageFilterView-->
+<!--                android:id="@+id/detail_mainImgView1"-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_margin="50dp"-->
+<!--                android:background="@drawable/feed"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
 
 
-        </LinearLayout>
-    </ScrollView>
+
+<!--            <TextView-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_marginStart="50dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/detail_mainImgView" />-->
+
+<!--            <androidx.constraintlayout.utils.widget.ImageFilterView-->
+<!--                android:id="@+id/detail_mainImgView2"-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_margin="50dp"-->
+<!--                android:background="@drawable/feed"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
