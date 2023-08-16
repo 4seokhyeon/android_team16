@@ -42,7 +42,7 @@ class InfoModifyDialog(context: Context, id: String) : Dialog(context) {
             memberManager.findMember(curId)?.let {
                 memberManager.updateMember(it.id, it.pw, name.text.toString(), mbti.text.toString(), it.profileImg, status.text.toString(), it.post)
             }
-            (getActivity(context) as SignInActivity).dataChangeListener()
+            (getActivity(context) as MyPageActivity).dataChangeListener()
             dismiss()
         }
 
