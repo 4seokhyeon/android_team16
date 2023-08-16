@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.snsproject.R
 import com.example.snsproject.manager.MemberManager
-import com.example.snsproject.manager.MemberManagerImpl
+//import com.example.snsproject.manager.MemberManagerImpl
 
 class SignUpActivity : AppCompatActivity() {
     lateinit var memberManager: MemberManager
@@ -12,7 +12,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        memberManager = MemberManagerImpl.getInstance()
+       // memberManager = MemberManagerImpl.getInstance()
 
     }
 }

@@ -1,3 +1,4 @@
+/*
 package com.example.snsproject.manager
 
 import com.example.snsproject.model.Comment
@@ -154,4 +155,4 @@ class MemberManagerImpl private constructor() : MemberManager {
         }
     }
 
-}
+}*/
