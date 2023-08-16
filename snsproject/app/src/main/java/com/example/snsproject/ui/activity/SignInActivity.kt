@@ -14,6 +14,6 @@ import com.example.snsproject.manager.MemberManagerImpl
 class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_detail_page)
     }
 }
