@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.snsproject.R
 
+// Glide.with(this).load(R.drawable.myimage).circleCrop().into(myimageview);
 class MyPageItemAdapter (val context: Context, val itemList: ArrayList<Any>) : BaseAdapter() {
     override fun getCount(): Int {
         return itemList.size
