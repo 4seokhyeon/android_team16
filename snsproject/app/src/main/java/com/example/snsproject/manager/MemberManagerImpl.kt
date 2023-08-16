@@ -143,7 +143,7 @@ class MemberManagerImpl private constructor() : MemberManager {
     }
 
     companion object {
-        var instance : MemberManagerImpl? = null
+        private var instance : MemberManagerImpl? = null
 
         fun getInstance() : MemberManagerImpl {
             return instance ?: synchronized(this) {
