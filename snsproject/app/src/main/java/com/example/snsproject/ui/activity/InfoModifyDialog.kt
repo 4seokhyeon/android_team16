@@ -31,8 +31,7 @@ class InfoModifyDialog(context: Context, id: String) : Dialog(context) {
         confirmButton = findViewById<Button>(R.id.mypage_confirm_btn)
         closeButton = findViewById<Button>(R.id.mypage_close_btn)
 
-
-        //window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
         confirmButton.setOnClickListener {
             val name = findViewById<EditText>(R.id.mypage_name_edittext)
