@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageButton
+        android:id="@+id/per_image_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/round_img_other_btn"
+        android:clipToOutline="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/blank_img" />
+
+    <TextView
+        android:id="@+id/per_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+</LinearLayout>

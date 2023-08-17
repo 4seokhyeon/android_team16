@@ -6,21 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.MainPageActivity">
 
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tb_main">
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
     <include
         android:id="@+id/tb_main"
         layout="@layout/main_toolbar" />
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageBtn1"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="2dp"
+
+       
         android:contentDescription="TODO"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="myprofile"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/tb_main"
+        app:layout_constraintEnd_toEndOf="@+id/tb_main"
+        app:layout_constraintStart_toEndOf="@+id/welcom_text"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
+        app:layout_constraintVertical_bias="0.43"
+        app:srcCompat="@drawable/blank_img" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/welcom_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="환영합니다."
@@ -41,18 +63,16 @@
         android:layout_marginEnd="180dp"
         android:layout_marginBottom="11dp"
         app:layout_constraintBottom_toBottomOf="@+id/tb_main"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tb_main"
-        app:layout_constraintTop_toTopOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/presence_online" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="458dp"
+        android:layout_width="match_parent"
         android:layout_height="115dp"
-        android:background="#EEEEEE"
+        android:background="#E3F2FD"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,11 +82,12 @@
             android:id="@+id/main_page_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
-            <View
-                android:layout_width="50dp"
-                android:layout_height="match_parent" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -74,43 +95,20 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageButton
+
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/my_img"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/round_img_button"
-                    android:clipToOutline="true"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/sukhyun" />
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/blank_img"
+                    app:civ_border_color="#FF4081"
+                    app:civ_border_overlay="true"
+                    app:civ_border_width="3dp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="20dp"
-                    android:text="Name"
-                    android:textColor="#000000"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/per1"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/round_img_button"
-                    android:clipToOutline="true"
-                    android:padding="5dp"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/dakyum" />
-
-                <TextView
+                    android:id="@+id/user"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Name"
@@ -118,85 +116,7 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-            <View
-                android:layout_width="8dp"
-                android:layout_height="match_parent" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/per2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/round_img_button"
-                    android:clipToOutline="true"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/hyemyung" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="15dp"
-                    android:text="Name"
-                    android:textColor="#000000"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/per3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/round_img_button"
-                    android:clipToOutline="true"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/keuntae" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="15dp"
-                    android:text="Name"
-                    android:textColor="#000000"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/per4"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/round_img_button"
-                    android:clipToOutline="true"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/kwanghee" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="15dp"
-                    android:text="Name"
-                    android:textColor="#000000"
-                    android:textSize="12sp" />
-            </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -205,10 +125,9 @@
         android:id="@+id/main_page_listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+        android:backgroundTint="#D240FB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
