@@ -26,6 +26,7 @@ class MainPageActivity : AppCompatActivity() {
     private lateinit var coordinatorLayout: CoordinatorLayout //알람 상태바인 스냅바를 받아옴
     private lateinit var userId:String //유저 아이디를 받아옴
     private lateinit var user: Member
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_page)

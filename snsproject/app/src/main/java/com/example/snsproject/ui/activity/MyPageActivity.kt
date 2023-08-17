@@ -1,24 +1,31 @@
 package com.example.snsproject.ui.activity
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.TextView
 import com.example.snsproject.R
 import com.example.snsproject.adapter.MyPageItemAdapter
+import com.example.snsproject.anim.slideLeft
+import com.example.snsproject.anim.slideRight
 import com.example.snsproject.manager.MemberManager
 import com.example.snsproject.manager.MemberManagerImpl
 
 class MyPageActivity : AppCompatActivity() {
-    lateinit var memberManager : MemberManager
+    private lateinit var memberManager : MemberManager
+    private lateinit var curId : String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_page)
 
         memberManager = MemberManagerImpl.getInstance()
+        curId = intent.getStringExtra("userId") ?: "test1"
         val listview = findViewById<ListView>(R.id.mypage_listview)
-        val member = memberManager.findMember("test1")
+        val member = memberManager.findMember(curId)
+
 
         initView()
 
@@ -29,7 +36,7 @@ class MyPageActivity : AppCompatActivity() {
         val modifyButton = findViewById<TextView>(R.id.mypage_modify_button)
 
         modifyButton.setOnClickListener {
-            val modifyDialog = InfoModifyDialog(this, "test1")
+            val modifyDialog = InfoModifyDialog(this, curId)
             modifyDialog.show()
         }
 
@@ -41,14 +48,22 @@ class MyPageActivity : AppCompatActivity() {
         val name = findViewById<TextView>(R.id.mypage_tv_name)
         val mbti = findViewById<TextView>(R.id.mypage_tv_mbti)
         val status = findViewById<TextView>(R.id.mypage_tv_status)
-        val member = memberManager.findMember("test1")!!
+        val backButton = findViewById<ImageButton>(R.id.mypage_back_btn)
+        val member = memberManager.findMember(curId)!!
 
         id.text = "ID : ${member.id}"
         name.text = "NAME : ${member.name}"
         mbti.text = "MBTI : ${member.mbti}"
         status.text = member.status
 
-
+        backButton.setOnClickListener {
+            finish()
+            slideLeft()
+        }
+    }
+    override fun onBackPressed() {
+        finish()
+        slideLeft()
     }
 
     @SuppressLint("SetTextI18n")
@@ -57,7 +72,7 @@ class MyPageActivity : AppCompatActivity() {
         val name = findViewById<TextView>(R.id.mypage_tv_name)
         val mbti = findViewById<TextView>(R.id.mypage_tv_mbti)
         val status = findViewById<TextView>(R.id.mypage_tv_status)
-        val member = memberManager.findMember("test1")!!
+        val member = memberManager.findMember(curId)!!
 
         id.text = "ID : ${member.id}"
         name.text = "NAME : ${member.name}"

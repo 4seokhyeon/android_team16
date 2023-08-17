@@ -45,7 +45,6 @@ class MyPageItemAdapter (val context: Context, val post: MutableList<Post>) : Ba
         feed.setImageResource(feedId)
         name.text = data.author
         content.text = data.content
-        content.text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 
         setViewMore(content, open, hide)
 
