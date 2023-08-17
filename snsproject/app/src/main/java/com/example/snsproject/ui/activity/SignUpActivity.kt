@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.example.snsproject.R
+import com.example.snsproject.anim.slideLeft
 import com.example.snsproject.manager.MemberManager
 import com.example.snsproject.manager.MemberManagerImpl
 // textWatcher 로 실시간 해보기
@@ -89,16 +90,20 @@ class SignUpActivity : AppCompatActivity() {
 
             memberManager.addMember(supid.text.toString(), suppw.text.toString(), supname.text.toString(), "dakyum") // 데이터를 먼저 넣었어서 if 문들이 실행되어 마지막에 빨간 글씨가 되었다.
 
+
             val intent = Intent(this,SignInActivity::class.java)
-             intent.putExtra("userId", supid.text.toString())
-             intent.putExtra("userPw", suppw.text.toString())
-            startActivity(intent)
-//            finish()
+            intent.putExtra("userId", supid.text.toString())
+            intent.putExtra("userPw", suppw.text.toString())
+            setResult(RESULT_OK, intent)
+            finish()
+            slideLeft()
+
         }
 
         val supcancel = findViewById<Button>(R.id.bnt_supcancel)
         supcancel.setOnClickListener{
             finish()
+            slideLeft()
         }
     }
 
@@ -133,5 +138,10 @@ class SignUpActivity : AppCompatActivity() {
         val hasSpecialChar = password.any {!it.isLetterOrDigit()} // 문자 열 중에 영문자나 숫자 제외하고 하나이상의 특수기호가 있는지 확인
 
         return password.length >= minLength && hasDigit && (hasLowerCase || hasUpperCase)&& hasSpecialChar
+    }
+
+    override fun onBackPressed() {
+        finish()
+        slideLeft()
     }
 }

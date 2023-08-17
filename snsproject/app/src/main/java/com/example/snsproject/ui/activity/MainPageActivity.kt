@@ -11,7 +11,7 @@ import com.example.snsproject.manager.MemberManager
 import com.example.snsproject.manager.MemberManagerImpl
 
 class MainPageActivity : AppCompatActivity() {
-private lateinit var memberManager: MemberManager
+    private lateinit var memberManager: MemberManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_page)
