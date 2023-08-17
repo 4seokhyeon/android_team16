@@ -62,7 +62,7 @@ class MainPageActivity : AppCompatActivity() {
         myImagButton.setOnClickListener{
             //클릭하면 사용자 프로필 화면으로  가는 로직 & 데이터 넘김 처리
             val intent = Intent(this, MyPageActivity::class.java)
-            //intent.putExtra("user",user)
+            intent.putExtra("userId",userId)
             startActivity(intent)
         }
 
