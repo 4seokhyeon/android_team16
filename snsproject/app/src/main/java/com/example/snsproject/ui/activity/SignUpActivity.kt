@@ -112,9 +112,11 @@ class SignUpActivity : AppCompatActivity() {
         for(b in memberid) { //멘버 안에 정보가 b에 들어가고
             if(b.id == a){ //b 중에 id 부분만 갖고와서 앱사용자가 작성한 a 와 비교하여
                 supcheck.setTextColor(Color.RED) // 비교 일치시 빨간색 글자로 된다.
+                supcheck.text = "중복된 ID가 있습니다." // 앱 내에서 textview를 바꾸는 방법.
                 break // 일치하면 붉은색글자를 해두고 for 문을 멈춰야 해서 break를 넣어 반복문을 빠져나온다.
             } else {
                 supcheck.setTextColor(Color.BLACK)
+                supcheck.text = "사용 가능한 ID 입니다."
                 check = true
             }
         }
