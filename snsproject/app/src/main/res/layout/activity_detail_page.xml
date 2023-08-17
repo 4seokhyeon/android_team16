@@ -89,8 +89,8 @@
 
             <TextView
                 android:id="@+id/detail_IDText"
-                android:text="ID : "
-                android:textSize="30dp"
+                android:text="ID        : "
+                android:textSize="15sp"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
@@ -103,6 +103,8 @@
                 />
             <TextView
                 android:id="@+id/detail_NameText"
+                android:text="이름     : "
+                android:textSize="15sp"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
@@ -115,6 +117,8 @@
                 />
             <TextView
                 android:id="@+id/detail_MBTIText"
+                android:text="MBTI   : "
+                android:textSize="15sp"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
@@ -127,6 +131,8 @@
                 />
             <TextView
                 android:id="@+id/detail_StatusText"
+                android:text="상태     : "
+                android:textSize="15sp"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
@@ -200,10 +206,11 @@
         android:id="@+id/detail_listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat"></ListView>
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutCompat"></ListView>
 
 
     <!--    <ScrollView-->
