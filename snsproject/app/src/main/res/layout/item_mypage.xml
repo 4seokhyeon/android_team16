@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="250dp">
+    android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/mypage_profile_pic"
@@ -42,12 +42,39 @@
 
     <TextView
         android:id="@+id/mypage_item_content"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
         android:layout_marginTop="4dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:text="Content"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mypage_item_feed" />
+
+    <TextView
+        android:id="@+id/mypage_open_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="더보기"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mypage_item_content" />
+
+    <TextView
+        android:id="@+id/mypage_hide_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="줄이기"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mypage_open_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
