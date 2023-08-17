@@ -10,15 +10,15 @@ class MemberManagerImpl private constructor() : MemberManager {
     init {
         memberList.add(
             Member("test1",
-            "123",
-            "dakyum",
-            "INFJ",
-            "dakyum",
-            "online",
-            mutableListOf(Post("dakyum",
-                "feed",
-                "my title",
-            "my content",
+                "123",
+                "dakyum",
+                "INFJ",
+                "dakyum",
+                "online",
+                mutableListOf(Post("dakyum",
+                    "feed",
+                    "my title",
+                    "my content",
                     mutableListOf(Comment("keuntae", "hello")))
                 )
             )
@@ -87,6 +87,36 @@ class MemberManagerImpl private constructor() : MemberManager {
                 )
             )
         )
+        memberList.add(
+            Member("test6",
+                "123",
+                "Hongildong",
+                "ISTP",
+                "black_img",
+                "online",
+                mutableListOf(Post("Hongildong",
+                    "feed",
+                    "my title",
+                    "my content",
+                    mutableListOf(Comment("keuntae", "hello")))
+                )
+            )
+        )
+        memberList.add(
+            Member("test7",
+                "123",
+                "gamza",
+                "ISTP",
+                "black_img",
+                "online",
+                mutableListOf(Post("gamza",
+                    "feed",
+                    "my title",
+                    "my content",
+                    mutableListOf(Comment("keuntae", "hello")))
+                )
+            )
+        )
     }
 
     override fun addMember(id: String, pw: String, name: String, profileImg: String): Boolean {
@@ -116,7 +146,7 @@ class MemberManagerImpl private constructor() : MemberManager {
 
     override fun deleteMember(id: String): Boolean {
         return findMember(id)?.let { memberList.remove(it)
-                                     true } ?: false
+            true } ?: false
     }
 
     override fun findMemberIndexOf(id: String): Int {
@@ -155,8 +185,8 @@ class MemberManagerImpl private constructor() : MemberManager {
 
         fun getInstance() : MemberManagerImpl {
             return instance ?: synchronized(this) {
-                    instance ?: MemberManagerImpl().also {
-                        instance = it
+                instance ?: MemberManagerImpl().also {
+                    instance = it
                 }
             }
         }
