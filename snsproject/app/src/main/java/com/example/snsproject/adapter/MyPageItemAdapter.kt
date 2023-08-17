@@ -25,6 +25,7 @@ class MyPageItemAdapter (val context: Context, val post: MutableList<Post>) : Ba
         return 0
     }
 
+    @SuppressLint("SetTextI18n")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view: View = LayoutInflater.from(context).inflate(R.layout.item_mypage, null)
 
@@ -32,6 +33,8 @@ class MyPageItemAdapter (val context: Context, val post: MutableList<Post>) : Ba
         val name = view.findViewById<TextView>(R.id.mypage_item_name)
         val feed = view.findViewById<ImageView>(R.id.mypage_item_feed)
         val content = view.findViewById<TextView>(R.id.mypage_item_content)
+        val open = view.findViewById<TextView>(R.id.mypage_open_btn)
+        val hide = view.findViewById<TextView>(R.id.mypage_hide_btn)
 
         val data = post[position]
 
@@ -42,7 +45,34 @@ class MyPageItemAdapter (val context: Context, val post: MutableList<Post>) : Ba
         feed.setImageResource(feedId)
         name.text = data.author
         content.text = data.content
+        content.text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+        setViewMore(content, open, hide)
 
         return view
+    }
+}
+
+private fun setViewMore(contentTextView: TextView, viewMoreTextView:TextView,viewMoreTextViewExit: TextView){
+    contentTextView.post {
+        val lineCount = contentTextView.layout.lineCount
+
+        if(lineCount > 0) {
+            if (contentTextView.layout.getEllipsisCount(lineCount - 1) > 0) {
+                viewMoreTextView.visibility = View.VISIBLE
+            }
+
+            viewMoreTextView.setOnClickListener {
+                contentTextView.maxLines = Int.MAX_VALUE
+                viewMoreTextView.visibility = View.GONE
+                viewMoreTextViewExit.visibility = View.VISIBLE
+            }
+
+            viewMoreTextViewExit.setOnClickListener {
+                contentTextView.maxLines = 1
+                viewMoreTextView.visibility = View.VISIBLE
+                viewMoreTextViewExit.visibility = View.GONE
+            }
+        }
     }
 }
