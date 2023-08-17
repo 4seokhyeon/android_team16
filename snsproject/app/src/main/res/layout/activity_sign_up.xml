@@ -69,8 +69,8 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_supid" />
 
 
-    <Button
-        android:id="@+id/bnt_supidcheck"
+    <TextView
+        android:id="@+id/tv_supcheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -78,6 +78,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/edtv_supid"
         app:layout_constraintStart_toEndOf="@+id/edtv_supid"
         app:layout_constraintTop_toTopOf="@+id/edtv_supid" />
+<!--    <Button-->
+<!--        android:id="@+id/bnt_supidcheck"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:text="중복확인"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/edtv_supid"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/edtv_supid"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/edtv_supid" />-->
 
     <TextView
         android:id="@+id/tv_suppw"
@@ -127,5 +136,13 @@
         app:layout_constraintTop_toTopOf="@+id/bnt_supcancel"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextSwitcher
+        android:id="@+id/tw_sup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
