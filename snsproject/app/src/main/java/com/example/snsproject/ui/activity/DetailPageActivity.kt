@@ -56,7 +56,7 @@ class DetailPageActivity : AppCompatActivity() {
     override fun onBackPressed(){//핸드폰 뒤로가기 버튼 눌렀을 때,
 
         finish()
-        slideRight()// 오른쪽으로 넘기는 애니메이션 추가
+        slideLeft()// 오른쪽으로 넘기는 애니메이션 추가
     }
 
     }
