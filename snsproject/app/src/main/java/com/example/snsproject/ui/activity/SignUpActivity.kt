@@ -25,12 +25,8 @@ class SignUpActivity : AppCompatActivity() {
         val supid = findViewById<EditText>(R.id.edtv_supid)
         val suppw = findViewById<EditText>(R.id.edtv_suppw)
 
-        val supcheck = findViewById<TextView>(R.id.tv_supcheck)
-        val memberid = memberManager.findAllMember()
-
         supid.addTextChangedListener(object: TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -41,6 +37,9 @@ class SignUpActivity : AppCompatActivity() {
             }
         })
 
+
+//        val supcheck = findViewById<TextView>(R.id.tv_supcheck)
+//        val memberid = memberManager.findAllMember()
 
 //        val supidcheck = findViewById<Button>(R.id.bnt_supidcheck)
 //        supidcheck.setOnClickListener {
@@ -65,29 +64,40 @@ class SignUpActivity : AppCompatActivity() {
 //            }
 //        }
 
+        val supdone = findViewById<Button>(R.id.bnt_supdone)
 
-        val supdone = findViewById<Button>(R.id.bnt_supdone) // 빈칸있나확인하고 멤버에 추가하고 signIn 에 Id,pw 갖다주기.
-
+        // 빈칸있나확인하고 멤버에 추가하고 signIn 에 Id,pw 갖다주기.
         supdone.setOnClickListener{
             if(supname.text.toString().isEmpty() ||
                 supid.text.toString().isEmpty() ||
                 suppw.text.toString().isEmpty()) {
                 Toast.makeText(this, "빈칸을 모두 채워 주세요", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
-            }
+            } // 이름, 아이디, 비밀번호 빈칸있는지 체크 하는 부분
 
-            memberManager.addMember(supid.text.toString(), suppw.text.toString(), supname.text.toString(), "dakyum")
+            if(pwcheck(suppw.text.toString())){
+            } else {
+                Toast.makeText(this, "비밀번호 형식에 맞춰 작성 해주세요", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } // 비밀번호 체크 하는 조건문
 
-            finish()
-//            val intent = Intent(this,SignInActivity::class.java)
-//            val newMId = intent.putExtra("newID", supid.text.toString())
-//            val newMPw = intent.putExtra("newPW", suppw.text.toString())
-//            startActivity(newMPw)
-//            startActivity(newMId)
+            if(checkId()){
+            } else {
+                Toast.makeText(this, "아이디를 확인 해주세요", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } // 아이디 중복되는 체크 하는 조건문
+
+            memberManager.addMember(supid.text.toString(), suppw.text.toString(), supname.text.toString(), "dakyum") // 데이터를 먼저 넣었어서 if 문들이 실행되어 마지막에 빨간 글씨가 되었다.
+
+            val intent = Intent(this,SignInActivity::class.java)
+             intent.putExtra("userId", supid.text.toString())
+             intent.putExtra("userPw", suppw.text.toString())
+            startActivity(intent)
+//            finish()
         }
 
         val supcancel = findViewById<Button>(R.id.bnt_supcancel)
-        supcancel.setOnClickListener{ // 취소버튼 누르면 뒤로가진다. signIn 페이지로 가는지 확인하기
+        supcancel.setOnClickListener{
             finish()
         }
     }
@@ -99,17 +109,27 @@ class SignUpActivity : AppCompatActivity() {
         val memberid = memberManager.findAllMember()
         val a = supid.text.toString().trim() // 글자로 변경하고 trim이 공백제거
         var check = false
-        for(b in memberid) {
-            if(b.id == a){
-//                Toast.makeText(this, "중복된 아이디가 있습니다. 다시 작성해주세요", Toast.LENGTH_SHORT).show()
-                supcheck.setTextColor(Color.RED)
-                break
+        for(b in memberid) { //멘버 안에 정보가 b에 들어가고
+            if(b.id == a){ //b 중에 id 부분만 갖고와서 앱사용자가 작성한 a 와 비교하여
+                supcheck.setTextColor(Color.RED) // 비교 일치시 빨간색 글자로 된다.
+                break // 일치하면 붉은색글자를 해두고 for 문을 멈춰야 해서 break를 넣어 반복문을 빠져나온다.
             } else {
-//                Toast.makeText(this, "사용 가능한 아이디 입니다.", Toast.LENGTH_SHORT).show()
                 supcheck.setTextColor(Color.BLACK)
                 check = true
             }
         }
         return check
+    } // 아이디 중복되는지 체크하는 함수
+
+    fun pwcheck(password : String) : Boolean{
+
+        val minLength = 5 // 비밀번호 최소 자릿수
+        // 밑에 4개는 모두 Boolean 형태로 반환
+        val hasDigit = password.any {it.isDigit()} //  문자열 중에 하나이상이 숫자인지 확인
+        val hasLowerCase = password.any {it.isLowerCase()} // 문자열 중에 하나이상의 소문자 있는지 확인
+        val hasUpperCase = password.any {it.isUpperCase()} // 문자열 중에 하나이상의 대문자 있는지 확인
+        val hasSpecialChar = password.any {!it.isLetterOrDigit()} // 문자 열 중에 영문자나 숫자 제외하고 하나이상의 특수기호가 있는지 확인
+
+        return password.length >= minLength && hasDigit && (hasLowerCase || hasUpperCase)&& hasSpecialChar
     }
 }
