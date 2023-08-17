@@ -21,38 +21,44 @@ class DetailPageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail_page)
         memberManager = MemberManagerImpl.getInstance()
 
-        val detailImg = findViewById<ImageView>(R.id.detail_img)
-        val detailID = findViewById<TextView>(R.id.detail_IDInputText)
-        val detailName = findViewById<TextView>(R.id.detail_NameInputText)
-        val detailMBTI = findViewById<TextView>(R.id.detail_MBTIInputText)
-        val detailStatus = findViewById<TextView>(R.id.detail_StatusInputText)
-        val detailListView = findViewById<ListView>(R.id.detail_listview)
-        val detailUndoBtn = findViewById<Button>(R.id.detail_Undo_Btn)
+        val detailImg = findViewById<ImageView>(R.id.detail_img) //이미지뷰 변수
+        val detailID = findViewById<TextView>(R.id.detail_IDInputText) //사용자 ID 텍스트뷰
+        val detailName = findViewById<TextView>(R.id.detail_NameInputText) // 사용자 이름 텍스트뷰
+        val detailMBTI = findViewById<TextView>(R.id.detail_MBTIInputText) // 사용자 MBTI 텍스트뷰
+        val detailStatus = findViewById<TextView>(R.id.detail_StatusInputText) // 사용자 상태 텍스트뷰
+        val detailListView = findViewById<ListView>(R.id.detail_listview)// 리스트뷰
+        val detailUndoBtn = findViewById<Button>(R.id.detail_Undo_Btn)// 뒤로가기 버튼
 
 
 
-        val member = memberManager.findMember("test2")
-        var postList = member?.post
-        val imgIdx =  member?.profileImg
+        val member = memberManager.findMember("test2") //멤버변수 설정 FindMember 사용
+        var postList = member?.post// 찾은 멤버의 Post리스트 지정
+        val imgIdx =  member?.profileImg//이미지 제목 불러오기
 
-        println(imgIdx)
-        detailID.text = member?.id
+        detailID.text = member?.id //텍스트뷰에 자룟값들 입력
         detailName.text =  member?.name
         detailMBTI.text = member?.mbti
         detailStatus.text = member?.status
-        var img = resources.getIdentifier(imgIdx,"drawable",packageName)
-        detailImg.setImageResource(img)
 
-        val detailAdapter = postList?.let { DetailItemAdapter(this, it) }
-        detailListView.adapter = detailAdapter
+        var img = resources.getIdentifier(imgIdx,"drawable",packageName)//setImageResource를 사용하기위해 getIdentifier를 이용하여 이미지의 인덱스값 추출
+        detailImg.setImageResource(img)//detail 이미지뷰에 이미지 출력
 
-        detailUndoBtn.setOnClickListener{
-            var intent= Intent(this,MainPageActivity::class.java)
-            startActivity(intent)
-            slideRight()
+        val detailAdapter = postList?.let { DetailItemAdapter(this, it) }// ListView출력을 위해 adapter 지정
+        detailListView.adapter = detailAdapter// ListView 출력
+
+        detailUndoBtn.setOnClickListener{//뒤로가기 버튼이 눌렸을 때,
+            var intent= Intent(this,MainPageActivity::class.java)//인텐트 생성
+            startActivity(intent)// 해당 엑티비티 실행
+            slideRight()// 오른쪽으로 넘기는 애니메이션 추가
         }
 
 
         }
+    override fun onBackPressed(){
+        var intent= Intent(this,MainPageActivity::class.java)//인텐트 생성
+        startActivity(intent)// 해당 엑티비티 실행
+        finish()
+        slideRight()// 오른쪽으로 넘기는 애니메이션 추가
+    }
 
     }

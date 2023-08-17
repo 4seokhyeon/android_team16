@@ -21,6 +21,7 @@
         <activity
             android:name=".ui.activity.DetailPageActivity"
             android:exported="false" />
+
         <activity
             android:name=".ui.activity.MyPageActivity"
             android:exported="false" />
