@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">snsproject</string>
     <string name="Detail_IdText">"아이디 : "</string>
+    <string name="detail_Name">"아이디 : "</string>
+    <string name="detail_Status">"상태 : "</string>
 </resources>

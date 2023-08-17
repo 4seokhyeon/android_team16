@@ -89,7 +89,7 @@
 
             <TextView
                 android:id="@+id/detail_IDText"
-                android:text="ID        : "
+                android:text="@string/Detail_IdText"
                 android:textSize="15sp"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -103,7 +103,7 @@
                 />
             <TextView
                 android:id="@+id/detail_NameText"
-                android:text="이름     : "
+                android:text="@string/detail_Name"
                 android:textSize="15sp"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -117,7 +117,7 @@
                 />
             <TextView
                 android:id="@+id/detail_MBTIText"
-                android:text="MBTI   : "
+                android:text="@string/detail_MBTI"
                 android:textSize="15sp"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
@@ -131,7 +131,7 @@
                 />
             <TextView
                 android:id="@+id/detail_StatusText"
-                android:text="상태     : "
+                android:text="@string/detail_Status"
                 android:textSize="15sp"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
