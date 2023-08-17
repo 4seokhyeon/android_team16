@@ -47,16 +47,14 @@ class DetailPageActivity : AppCompatActivity() {
         detailListView.adapter = detailAdapter// ListView 출력
 
         detailUndoBtn.setOnClickListener{//뒤로가기 버튼이 눌렸을 때,
-            var intent= Intent(this,MainPageActivity::class.java)//인텐트 생성
-            startActivity(intent)// 해당 엑티비티 실행
+            finish()
             slideRight()// 오른쪽으로 넘기는 애니메이션 추가
         }
 
 
         }
-    override fun onBackPressed(){
-        var intent= Intent(this,MainPageActivity::class.java)//인텐트 생성
-        startActivity(intent)// 해당 엑티비티 실행
+    override fun onBackPressed(){//핸드폰 뒤로가기 버튼 눌렀을 때,
+
         finish()
         slideRight()// 오른쪽으로 넘기는 애니메이션 추가
     }
