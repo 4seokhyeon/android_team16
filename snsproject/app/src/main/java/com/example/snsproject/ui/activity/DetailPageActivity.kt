@@ -31,7 +31,9 @@ class DetailPageActivity : AppCompatActivity() {
 
 
 
-        val member = memberManager.findMemberByAuthor("gamza") //멤버변수 설정 FindMember 사용 - 추후 Detail_ID 입력
+
+        val id = intent.getStringExtra("Id").toString()
+        val member = memberManager.findMember(id) //멤버변수 설정 FindMember 사용 - 추후 Detail_ID 입력
         var postList = member?.post// 찾은 멤버의 Post리스트 지정
         val imgIdx =  member?.profileImg//이미지 제목 불러오기
 
@@ -39,9 +41,12 @@ class DetailPageActivity : AppCompatActivity() {
         detailName.text =  member?.name
         detailMBTI.text = member?.mbti
         detailStatus.text = member?.status
+        if(!imgIdx.isNullOrEmpty())  {
+            var img = resources.getIdentifier(imgIdx,"drawable",packageName)//setImageResource를 사용하기위해 getIdentifier를 이용하여 이미지의 인덱스값 추출
+            detailImg.setImageResource(img)//detail 이미지뷰에 이미지 출력
+        }
 
-        var img = resources.getIdentifier(imgIdx,"drawable",packageName)//setImageResource를 사용하기위해 getIdentifier를 이용하여 이미지의 인덱스값 추출
-        detailImg.setImageResource(img)//detail 이미지뷰에 이미지 출력
+
 
         val detailAdapter = postList?.let { DetailItemAdapter(this, it) }// ListView출력을 위해 adapter 지정
         detailListView.adapter = detailAdapter// ListView 출력
