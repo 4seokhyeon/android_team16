@@ -47,6 +47,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Detail"
                 android:textSize="20dp"
+                android:fontFamily="@font/bmjua"
 
                 />
 
@@ -96,6 +97,7 @@
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
                 android:layout_marginBottom="120dp"
+                android:fontFamily="@font/bmjua"
                 app:layout_constraintStart_toEndOf="@id/detail_img"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -110,6 +112,7 @@
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
                 android:layout_marginBottom="120dp"
+                android:fontFamily="@font/bmjua"
                 app:layout_constraintStart_toEndOf="@id/detail_img"
                 app:layout_constraintTop_toBottomOf="@id/detail_IDText"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -124,6 +127,7 @@
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
                 android:layout_marginBottom="80dp"
+                android:fontFamily="@font/bmjua"
                 app:layout_constraintStart_toEndOf="@id/detail_img"
                 app:layout_constraintTop_toBottomOf="@id/detail_NameText"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -138,6 +142,7 @@
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
                 android:layout_marginBottom="40dp"
+                android:fontFamily="@font/bmjua"
 
                 app:layout_constraintStart_toEndOf="@id/detail_img"
                 app:layout_constraintTop_toBottomOf="@id/detail_MBTIText"
@@ -152,6 +157,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginBottom="120dp"
+                android:fontFamily="@font/bmjua"
                 app:layout_constraintStart_toEndOf="@id/detail_img"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -164,6 +170,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginBottom="120dp"
+                android:fontFamily="@font/bmjua"
                 app:layout_constraintStart_toEndOf="@id/detail_img"
                 app:layout_constraintTop_toBottomOf="@id/detail_IDText"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -176,6 +183,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginBottom="80dp"
+                android:fontFamily="@font/bmjua"
                 app:layout_constraintStart_toEndOf="@id/detail_img"
                 app:layout_constraintTop_toBottomOf="@id/detail_NameText"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -188,6 +196,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginBottom="40dp"
+                android:fontFamily="@font/bmjua"
 
                 app:layout_constraintStart_toEndOf="@id/detail_img"
                 app:layout_constraintTop_toBottomOf="@id/detail_MBTIText"

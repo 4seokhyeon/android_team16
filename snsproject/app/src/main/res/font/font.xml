@@ -9,5 +9,19 @@
     <font android:fontStyle="normal"
         android:fontWeight="400"
         android:font="@font/dongle_regular"/>
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/nanum_square_roundl"/>
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/nanum_square_roundb"/>
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/nanum_square_roundr"/>
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/bmjua"/>
+
+
 
 </font-family>
