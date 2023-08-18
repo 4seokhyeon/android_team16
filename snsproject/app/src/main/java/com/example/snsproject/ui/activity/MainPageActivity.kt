@@ -69,13 +69,8 @@ class MainPageActivity : AppCompatActivity() {
             startActivity(intent)
             slideRight()
         }
-
-
-
-
-        val scrollView:HorizontalScrollView = findViewById(R.id.horizontalScrollView)
+        /*val scrollView:HorizontalScrollView = findViewById(R.id.horizontalScrollView)*/
         setupDynamicItems()
-
     }
 
     private fun setupDynamicItems() {
@@ -106,7 +101,7 @@ class MainPageActivity : AppCompatActivity() {
         nameTextView.text = member.name
 
         profileImageButton.setOnClickListener {
-            // Handle ImageButton click event here
+
         }
     }
 
