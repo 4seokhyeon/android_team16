@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:baselineAligned="false"
-            android:background="@color/detail_background"
+            android:background="#03A9F4"
             >
             <Button
                 android:id="@+id/detail_Undo_Btn"
@@ -51,9 +51,12 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/detail_img"
-                android:layout_margin="32dp"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+
+                android:layout_width="120dp"
+                android:layout_height="120dp"
 
                 android:layout_gravity="center"
                 android:background="@android:color/transparent"
@@ -80,10 +83,11 @@
             <TextView
                 android:id="@+id/detail_IDText"
                 android:text="@string/Detail_IdText"
-                android:textSize="15sp"
-                android:layout_width="50dp"
+                android:textSize="20sp"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="120dp"
                 android:fontFamily="@font/bmjua"
                 app:layout_constraintStart_toEndOf="@id/detail_img"
@@ -95,8 +99,8 @@
             <TextView
                 android:id="@+id/detail_NameText"
                 android:text="@string/detail_Name"
-                android:textSize="15sp"
-                android:layout_width="50dp"
+                android:textSize="20sp"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
                 android:layout_marginBottom="120dp"
@@ -110,8 +114,8 @@
             <TextView
                 android:id="@+id/detail_MBTIText"
                 android:text="@string/detail_MBTI"
-                android:textSize="15sp"
-                android:layout_width="50dp"
+                android:textSize="20sp"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
                 android:layout_marginBottom="80dp"
@@ -125,8 +129,8 @@
             <TextView
                 android:id="@+id/detail_StatusText"
                 android:text="@string/detail_Status"
-                android:textSize="15sp"
-                android:layout_width="50dp"
+                android:textSize="20sp"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
                 android:layout_marginBottom="40dp"
@@ -145,6 +149,8 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginBottom="120dp"
+                android:layout_marginTop="16dp"
+                android:textSize="20sp"
                 android:fontFamily="@font/bmjua"
                 app:layout_constraintStart_toEndOf="@id/detail_img"
                 app:layout_constraintTop_toTopOf="parent"
@@ -158,6 +164,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginBottom="120dp"
+                android:textSize="20sp"
                 android:fontFamily="@font/bmjua"
                 app:layout_constraintStart_toEndOf="@id/detail_img"
                 app:layout_constraintTop_toBottomOf="@id/detail_IDText"
@@ -171,6 +178,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginBottom="80dp"
+                android:textSize="20sp"
                 android:fontFamily="@font/bmjua"
                 app:layout_constraintStart_toEndOf="@id/detail_img"
                 app:layout_constraintTop_toBottomOf="@id/detail_NameText"
@@ -184,6 +192,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginBottom="40dp"
+                android:textSize="20sp"
                 android:fontFamily="@font/bmjua"
 
                 app:layout_constraintStart_toEndOf="@id/detail_img"
