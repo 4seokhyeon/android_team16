@@ -8,5 +8,8 @@
     <string name="putyourid">아이디를 입력하세요</string>
     <string name="doublecheck">중복확인</string>
     <string name="putyourpw">숫자+영문자+특수기호 총5글자 조합으로 비밀번호를 설정해주세요</string>
+    <string name="password">PassWord</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
 
 </resources>
