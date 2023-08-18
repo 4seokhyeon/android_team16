@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">snsproject</string>
+    <string name="Detail_IdText">ID :</string>
+    <string name="detail_Name">"Name : "</string>
+    <string name="detail_Status">"Status : "</string>
+    <string name="putyourname">Put Your name</string>
+    <string name="putyourid">Put Your Id</string>
+    <string name="doublecheck">Double Id check</string>
+    <string name="putyourpw">Put Your Pw(number+English+simbol)</string>
+
+</resources>

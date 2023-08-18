@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">snsproject</string>
+    <string name="Detail_IdText">ID :</string>
+    <string name="detail_Name">이름 :</string>
+    <string name="detail_MBTI" translatable="false">MBTI :</string>
+    <string name="detail_Status">상태 :</string>
+    <string name="putyourname">이름을 입력하세요</string>
+    <string name="putyourid">아이디를 입력하세요</string>
+    <string name="doublecheck">중복확인</string>
+    <string name="putyourpw">숫자+영문자+특수기호 총5글자 조합으로 비밀번호를 설정해주세요</string>
+
 </resources>

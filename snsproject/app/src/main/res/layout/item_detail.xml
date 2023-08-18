@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="270dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/detail_profile_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/kwanghee"
+        app:civ_border_color="#000000"
+        app:civ_border_overlay="true"
+        app:civ_border_width="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/detail_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="KwangHee"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_profile_pic"
+        app:layout_constraintStart_toEndOf="@+id/detail_profile_pic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516" />
+
+    <ImageView
+        android:id="@+id/detail_item_feed"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_profile_pic"
+        app:srcCompat="@drawable/feed" />
+
+    <TextView
+        android:id="@+id/detail_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="4dp"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_item_feed" />
+<!--    ellipsize = Text 크기가 TextView범위가 초과되었을 시 출력하지 못한 Text 표현방법 선택-->
+<!--    ellipsize = End > 초과된 범위 뒤에 ... 표시-->
+<!--    maxLines > Text의 최대 줄 수 정의-->
+
+    <TextView
+        android:id="@+id/detail_content_view_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="더보기"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_item_content"/>
+    <TextView
+        android:id="@+id/detail_content_view_more_Exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="줄이기"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_content_view_more"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
