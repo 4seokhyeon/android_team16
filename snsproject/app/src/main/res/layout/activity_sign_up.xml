@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="@string/detail_Name"
+        android:fontFamily="@font/bmjua"
         app:layout_constraintStart_toStartOf="@+id/edtv_supname"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -34,6 +35,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
+        android:fontFamily="@font/bmjua"
         android:hint="@string/putyourname"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:fontFamily="@font/bmjua"
         android:text="@string/Detail_IdText"
         app:layout_constraintStart_toStartOf="@+id/edtv_supname"
         app:layout_constraintTop_toBottomOf="@+id/edtv_supname" />
@@ -55,6 +58,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/bmjua"
         android:hint="@string/putyourid"
         android:inputType="text"
         tools:layout_editor_absoluteX="40dp"
@@ -69,6 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:fontFamily="@font/bmjua"
         android:text="@string/doublecheck"
         app:layout_constraintBottom_toBottomOf="@+id/edtv_supid"
         app:layout_constraintStart_toEndOf="@+id/edtv_supid"
@@ -89,6 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/password"
+        android:fontFamily="@font/bmjua"
         app:layout_constraintStart_toStartOf="@+id/edtv_supid"
         app:layout_constraintTop_toBottomOf="@+id/edtv_supid" />
 
@@ -99,6 +105,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:fontFamily="@font/bmjua"
         android:ems="10"
         android:textSize="12dp"
         android:hint="@string/putyourpw"
@@ -113,6 +120,7 @@
         android:id="@+id/bnt_supcancel"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bmjua"
         android:layout_marginTop="50dp"
         android:text="@string/cancel"
         app:layout_constraintEnd_toStartOf="@+id/bnt_supdone"
@@ -123,6 +131,7 @@
         android:id="@+id/bnt_supdone"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bmjua"
         android:text="@string/done"
         app:layout_constraintBottom_toBottomOf="@+id/bnt_supcancel"
         app:layout_constraintEnd_toEndOf="parent"
