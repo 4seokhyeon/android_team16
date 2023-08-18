@@ -82,7 +82,9 @@
 
             <TextView
                 android:id="@+id/detail_IDText"
+                android:fontFamily="@font/dongle_regular"
                 android:text="@string/Detail_IdText"
+
                 android:textSize="20sp"
                 android:layout_width="70dp"
                 android:layout_height="30dp"
