@@ -49,8 +49,6 @@ class MainPageActivity : AppCompatActivity() {
         listView.adapter = adapter
 
         val myImagBtn: ImageButton = findViewById(R.id.imageBtn1)
-        val userImageResource1 =  getProfileImageResource(user.profileImg)
-        myImagBtn.setImageResource(userImageResource1)
         myImagBtn.setOnClickListener{
             val intent = Intent(this,MyPageActivity::class.java)
             intent.putExtra("userId",userId)
