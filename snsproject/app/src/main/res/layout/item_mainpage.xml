@@ -33,51 +33,54 @@
 
     <ImageView
         android:id="@+id/mainpage_item_feed"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_width="412dp"
+        android:layout_height="164dp"
         android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_page_profile_pic"
         app:srcCompat="@drawable/feed" />
 
-    <TextView
-        android:id="@+id/mainpage_item_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginTop="4dp"
-        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        android:textSize="16sp"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:fontFamily="@font/bmjua"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="35dp"
+        android:layout_height="31dp"
+        android:background="@drawable/hart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainpage_item_feed" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="35dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="80dp"
+        android:background="@drawable/send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainpage_item_feed"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="35dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/tooltip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainpage_item_feed"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="35dp"
+        android:layout_height="31dp"
+        android:background="@drawable/bookmark"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainpage_item_feed" />
 
-    <TextView
-        android:id="@+id/main_content_view_more"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="더보기"
-        android:textSize="16sp"
-        android:fontFamily="@font/bmjua"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainpage_item_content"/>
-
-    <TextView
-        android:id="@+id/main_content_view_more_Exit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="줄이기"
-        android:textSize="16sp"
-        android:visibility="invisible"
-        android:fontFamily="@font/bmjua"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_content_view_more"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

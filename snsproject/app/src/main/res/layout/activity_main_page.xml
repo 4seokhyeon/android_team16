@@ -26,11 +26,10 @@
         android:id="@+id/imageBtn1"
         android:layout_width="60dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="50dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="2dp"
-
-       
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/person"
         android:contentDescription="TODO"
         android:onClick="myprofile"
         android:scaleType="centerInside"
@@ -39,7 +38,7 @@
         app:layout_constraintStart_toEndOf="@+id/welcom_text"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.43"
-        app:srcCompat="@drawable/blank_img" />
+         />
 
     <TextView
         android:id="@+id/welcom_text"
@@ -58,16 +57,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="46dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="11dp"
+        android:layout_width="128dp"
+        android:layout_height="65dp"
+        android:paddingRight="39dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/tb_main"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tb_main"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/presence_online" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="MissingConstraints" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -85,10 +83,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
-
-            <Space
-                android:layout_width="10dp"
-                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -127,9 +121,9 @@
         android:id="@+id/main_page_listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:backgroundTint="#D240FB"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView" />
+        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+        android:background="#11000000"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
