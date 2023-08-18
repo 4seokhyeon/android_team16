@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="Name"
+        android:fontFamily="@font/bmjua"
         app:layout_constraintStart_toStartOf="@+id/edtv_supname"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -35,6 +36,7 @@
         android:layout_marginEnd="20dp"
         android:ems="10"
         android:hint="@string/putyourname"
+        android:fontFamily="@font/bmjua"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="ID"
+        android:fontFamily="@font/bmjua"
         app:layout_constraintStart_toStartOf="@+id/edtv_supname"
         app:layout_constraintTop_toBottomOf="@+id/edtv_supname" />
 
@@ -57,6 +60,7 @@
         android:layout_marginTop="10dp"
         android:hint="@string/putyourid"
         android:inputType="text"
+        android:fontFamily="@font/bmjua"
         tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="327dp"
         app:layout_constraintStart_toStartOf="@+id/tv_supid"
@@ -70,6 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:text="@string/doublecheck"
+        android:fontFamily="@font/bmjua"
         app:layout_constraintBottom_toBottomOf="@+id/edtv_supid"
         app:layout_constraintStart_toEndOf="@+id/edtv_supid"
         app:layout_constraintTop_toTopOf="@+id/edtv_supid" />
@@ -88,7 +93,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="PassWord"
+        android:text="Password"
+        android:fontFamily="@font/bmjua"
         app:layout_constraintStart_toStartOf="@+id/edtv_supid"
         app:layout_constraintTop_toBottomOf="@+id/edtv_supid" />
 
@@ -105,6 +111,7 @@
         android:inputType="textPassword"
         android:maxLines="2"
         android:scrollbars="none"
+        android:fontFamily="@font/bmjua"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_suppw" />
@@ -115,6 +122,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Cancel"
+        android:fontFamily="@font/bmjua"
         app:layout_constraintEnd_toStartOf="@+id/bnt_supdone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtv_suppw" />
@@ -124,6 +132,7 @@
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:text="Done"
+        android:fontFamily="@font/bmjua"
         app:layout_constraintBottom_toBottomOf="@+id/bnt_supcancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/bnt_supcancel" />
