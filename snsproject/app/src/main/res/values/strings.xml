@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">snsproject</string>
     <string name="Detail_IdText">ID :</string>
+    <string name="detail_Name">이름 :</string>
+    <string name="detail_MBTI" translatable="false">MBTI :</string>
+    <string name="detail_Status">상태 :</string>
 
 </resources>
