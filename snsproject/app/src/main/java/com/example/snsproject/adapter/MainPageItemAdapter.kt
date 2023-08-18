@@ -1,6 +1,8 @@
 package com.example.snsproject.adapter
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +11,14 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.snsproject.R
+import com.example.snsproject.anim.slideLeft
+import com.example.snsproject.anim.slideRight
 import com.example.snsproject.model.Member
 import com.example.snsproject.model.Post
+import com.example.snsproject.ui.activity.DetailPageActivity
 
 class MainPageItemAdapter(val context: Context,val postList:List<Post>) : BaseAdapter() {
+    private lateinit var userId:String //유저 아이디를 받아옴
     override fun getCount(): Int {
         return postList.size
     }
@@ -44,6 +50,13 @@ class MainPageItemAdapter(val context: Context,val postList:List<Post>) : BaseAd
         nameTextView.text=data.author
         val post = data.content
         contentTextView.text = post
+
+        view.setOnClickListener{
+            val intent = Intent(context,DetailPageActivity::class.java)
+           // intent.putExtra("userId",userId)
+            context.startActivity(intent)
+            (context as? Activity)?.slideRight()
+        }
 
         return view
     }

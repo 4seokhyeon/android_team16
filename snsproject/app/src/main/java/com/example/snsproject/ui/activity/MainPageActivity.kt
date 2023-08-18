@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.example.snsproject.R
 import com.example.snsproject.adapter.MainPageItemAdapter
+import com.example.snsproject.anim.slideRight
 import com.example.snsproject.manager.MemberManager
 import com.example.snsproject.manager.MemberManagerImpl
 import com.example.snsproject.model.Member
@@ -50,7 +51,9 @@ class MainPageActivity : AppCompatActivity() {
         myImagBtn.setImageResource(userImageResource1)
         myImagBtn.setOnClickListener{
             val intent = Intent(this,MyPageActivity::class.java)
+            intent.putExtra("userId",userId)
             startActivity(intent)
+            slideRight()
         }
 
 
@@ -62,16 +65,12 @@ class MainPageActivity : AppCompatActivity() {
         myImagButton.setOnClickListener{
             //클릭하면 사용자 프로필 화면으로  가는 로직 & 데이터 넘김 처리
             val intent = Intent(this, MyPageActivity::class.java)
-            //intent.putExtra("user",user)
+            intent.putExtra("userId",userId)
             startActivity(intent)
+            slideRight()
         }
-
-
-
-
-        val scrollView:HorizontalScrollView = findViewById(R.id.horizontalScrollView)
+        /*val scrollView:HorizontalScrollView = findViewById(R.id.horizontalScrollView)*/
         setupDynamicItems()
-
     }
 
     private fun setupDynamicItems() {
@@ -102,7 +101,7 @@ class MainPageActivity : AppCompatActivity() {
         nameTextView.text = member.name
 
         profileImageButton.setOnClickListener {
-            // Handle ImageButton click event here
+
         }
     }
 
