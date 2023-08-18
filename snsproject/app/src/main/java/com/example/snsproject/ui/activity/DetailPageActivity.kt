@@ -31,11 +31,11 @@ class DetailPageActivity : AppCompatActivity() {
 
 
 
-        val member = memberManager.findMember("test2") //멤버변수 설정 FindMember 사용
+        val member = memberManager.findMemberByAuthor("gamza") //멤버변수 설정 FindMember 사용 - 추후 Detail_ID 입력
         var postList = member?.post// 찾은 멤버의 Post리스트 지정
         val imgIdx =  member?.profileImg//이미지 제목 불러오기
 
-        detailID.text = member?.id //텍스트뷰에 자룟값들 입력
+        detailID.text = member?.id //텍스트뷰에 자료값들 입력
         detailName.text =  member?.name
         detailMBTI.text = member?.mbti
         detailStatus.text = member?.status
@@ -48,7 +48,7 @@ class DetailPageActivity : AppCompatActivity() {
 
         detailUndoBtn.setOnClickListener{//뒤로가기 버튼이 눌렸을 때,
             finish()
-            slideRight()// 오른쪽으로 넘기는 애니메이션 추가
+            slideLeft()// 오른쪽으로 넘기는 애니메이션 추가
         }
 
 
