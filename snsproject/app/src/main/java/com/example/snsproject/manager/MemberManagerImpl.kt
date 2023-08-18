@@ -180,6 +180,17 @@ class MemberManagerImpl private constructor() : MemberManager {
         return true
     }
 
+    override fun findMemberByAuthor(author: String) : Member?{
+        for (member in memberList) {
+            for(post in member.post){
+                if(post.author == author) {
+                    return member
+                }
+            }
+        }
+        return null
+    }
+
     companion object {
         private var instance : MemberManagerImpl? = null
 
