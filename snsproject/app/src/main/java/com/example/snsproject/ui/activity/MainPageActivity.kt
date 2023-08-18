@@ -1,5 +1,7 @@
 package com.example.snsproject.ui.activity
 
+import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -101,6 +103,11 @@ class MainPageActivity : AppCompatActivity() {
         nameTextView.text = member.name
 
         profileImageButton.setOnClickListener {
+            val intent = Intent(profileImageButton.context,DetailPageActivity::class.java)
+            memberManager.findMemberByAuthor(member.name)
+            intent.putExtra("Id",member.id)
+            profileImageButton.context.startActivity(intent)
+            (profileImageButton.context as? Activity)?.slideRight()
 
         }
     }
