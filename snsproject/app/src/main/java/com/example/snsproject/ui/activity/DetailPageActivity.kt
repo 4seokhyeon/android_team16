@@ -48,7 +48,7 @@ class DetailPageActivity : AppCompatActivity() {
 
         detailUndoBtn.setOnClickListener{//뒤로가기 버튼이 눌렸을 때,
             finish()
-            slideRight()// 오른쪽으로 넘기는 애니메이션 추가
+            slideLeft()// 오른쪽으로 넘기는 애니메이션 추가
         }
 
 

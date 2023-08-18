@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.example.snsproject.R
 import com.example.snsproject.adapter.MainPageItemAdapter
+import com.example.snsproject.anim.slideRight
 import com.example.snsproject.manager.MemberManager
 import com.example.snsproject.manager.MemberManagerImpl
 import com.example.snsproject.model.Member
@@ -50,7 +51,9 @@ class MainPageActivity : AppCompatActivity() {
         myImagBtn.setImageResource(userImageResource1)
         myImagBtn.setOnClickListener{
             val intent = Intent(this,MyPageActivity::class.java)
+            intent.putExtra("userId",userId)
             startActivity(intent)
+            slideRight()
         }
 
 
@@ -64,6 +67,7 @@ class MainPageActivity : AppCompatActivity() {
             val intent = Intent(this, MyPageActivity::class.java)
             intent.putExtra("userId",userId)
             startActivity(intent)
+            slideRight()
         }
 
 
