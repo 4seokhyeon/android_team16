@@ -9,5 +9,8 @@
     <string name="putyourid">Put Your Id</string>
     <string name="doublecheck">Double Id check</string>
     <string name="putyourpw">Put Your Pw(number+English+simbol)</string>
+    <string name="password">Password</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
 
 </resources>
