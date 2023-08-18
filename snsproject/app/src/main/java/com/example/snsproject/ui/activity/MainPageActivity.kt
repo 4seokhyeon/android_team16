@@ -15,6 +15,7 @@ import android.widget.TextView
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.example.snsproject.R
 import com.example.snsproject.adapter.MainPageItemAdapter
+import com.example.snsproject.anim.slideLeft
 import com.example.snsproject.anim.slideRight
 import com.example.snsproject.manager.MemberManager
 import com.example.snsproject.manager.MemberManagerImpl
@@ -49,8 +50,6 @@ class MainPageActivity : AppCompatActivity() {
         listView.adapter = adapter
 
         val myImagBtn: ImageButton = findViewById(R.id.imageBtn1)
-        val userImageResource1 =  getProfileImageResource(user.profileImg)
-        myImagBtn.setImageResource(userImageResource1)
         myImagBtn.setOnClickListener{
             val intent = Intent(this,MyPageActivity::class.java)
             intent.putExtra("userId",userId)
@@ -73,6 +72,10 @@ class MainPageActivity : AppCompatActivity() {
         }
         /*val scrollView:HorizontalScrollView = findViewById(R.id.horizontalScrollView)*/
         setupDynamicItems()
+    }
+    override fun onBackPressed() {
+        finish()
+        slideLeft()
     }
 
     private fun setupDynamicItems() {

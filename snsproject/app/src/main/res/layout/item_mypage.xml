@@ -5,81 +5,89 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/mypage_profile_pic"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/keuntae"
-        app:civ_border_color="#000000"
-        app:civ_border_overlay="true"
-        app:civ_border_width="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/mypage_item_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="KeunTae"
-        android:fontFamily="@font/bmjua"
-        app:layout_constraintBottom_toBottomOf="@+id/mypage_profile_pic"
-        app:layout_constraintStart_toEndOf="@+id/mypage_profile_pic"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
-
-    <ImageView
-        android:id="@+id/mypage_item_feed"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypage_profile_pic"
-        app:srcCompat="@drawable/feed" />
-
-    <TextView
-        android:id="@+id/mypage_item_content"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginRight="48dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:text="Content"
-        android:textSize="16sp"
-        android:fontFamily="@font/bmjua"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.135"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypage_item_feed" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/mypage_open_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="더보기"
-        android:textSize="16sp"
-        android:visibility="invisible"
-        android:fontFamily="@font/bmjua"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypage_item_content" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mypage_profile_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/keuntae"
+            app:civ_border_color="#000000"
+            app:civ_border_overlay="true"
+            app:civ_border_width="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/mypage_hide_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="줄이기"
-        android:textSize="16sp"
-        android:fontFamily="@font/bmjua"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypage_open_btn" />
+        <TextView
+            android:id="@+id/mypage_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="KeunTae"
+            android:fontFamily="@font/bmjua"
+            app:layout_constraintBottom_toBottomOf="@+id/mypage_profile_pic"
+            app:layout_constraintStart_toEndOf="@+id/mypage_profile_pic"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.516" />
+
+        <ImageView
+            android:id="@+id/mypage_item_feed"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mypage_profile_pic"
+            app:srcCompat="@drawable/feed" />
+
+        <TextView
+            android:id="@+id/mypage_item_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Content"
+            android:textSize="16sp"
+            android:fontFamily="@font/bmjua"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.135"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mypage_item_feed" />
+
+        <TextView
+            android:id="@+id/mypage_open_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="더보기"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            android:fontFamily="@font/bmjua"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mypage_item_content" />
+
+        <TextView
+            android:id="@+id/mypage_hide_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="줄이기"
+            android:textSize="16sp"
+            android:fontFamily="@font/bmjua"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mypage_open_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

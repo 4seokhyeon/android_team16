@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.snsproject.R
+import com.example.snsproject.anim.imgPressed
 import com.example.snsproject.model.Post
 import org.w3c.dom.Text
 
@@ -27,6 +29,7 @@ class DetailItemAdapter(val context: Context, val itemList:MutableList<Post>) : 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {//뷰에 데이터 연결
         val view: View = LayoutInflater.from(context).inflate(R.layout.item_detail, null)
 
+        val thumbBtn = view.findViewById<ImageButton>(R.id.detail_thumbBtn)
         val profile = view.findViewById<ImageView>(R.id.detail_profile_pic)//리스트뷰 프로필 사진
         val name = view.findViewById<TextView>(R.id.detail_item_name)//리스트뷰 이름
         val feed = view.findViewById<ImageView>(R.id.detail_item_feed)//리스트뷰 피드사진
@@ -43,8 +46,9 @@ class DetailItemAdapter(val context: Context, val itemList:MutableList<Post>) : 
         name.text = data.author//이름 텍스트박스에 작성자 입력
         val feedImgId = context.resources.getIdentifier(data.postImg,"drawable",context.packageName)//feed 이미지 인덱스 생성
         feed.setImageResource(feedImgId)//feed사진 출력
-//        content.text = data.content //컨텐츠 글 출력
+        content.text = data.content //컨텐츠 글 출력
         setViewMore(content,viewMoreContent,viewMoreContentExit)// 컨텐츠 글 더보기 기능 실행
+        imgPressed(thumbBtn)//img 버튼 클릭시 상태 변경
 
 
 
@@ -52,6 +56,7 @@ class DetailItemAdapter(val context: Context, val itemList:MutableList<Post>) : 
         return view
     }
 }
+
 private fun setViewMore(contentTextView: TextView, viewMoreTextView:TextView,viewMoreTextViewExit: TextView){//더보기 기능 함수
     contentTextView.post{// Content의 내용이 들어있는 글 수정
         val lineCount = contentTextView.layout.lineCount//content의 줄 수 지정

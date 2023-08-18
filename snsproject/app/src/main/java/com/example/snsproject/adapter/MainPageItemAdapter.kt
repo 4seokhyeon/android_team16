@@ -39,7 +39,7 @@ class MainPageItemAdapter(val context: Context,val postList:List<Post>) : BaseAd
         val profileImageView = view.findViewById<ImageView>(R.id.main_page_profile_pic)
         val nameTextView = view.findViewById<TextView>(R.id.mainpage_item_name)
         val feedImageView = view.findViewById<ImageView>(R.id.mainpage_item_feed)
-        val contentTextView = view.findViewById<TextView>(R.id.mainpage_item_content)
+
 
         val data = postList[position]
         val profileId = context.resources.getIdentifier(data.author, "drawable", context.packageName)
@@ -51,7 +51,7 @@ class MainPageItemAdapter(val context: Context,val postList:List<Post>) : BaseAd
 
         nameTextView.text=data.author
         val post = data.content
-        contentTextView.text = post
+
 
 
 

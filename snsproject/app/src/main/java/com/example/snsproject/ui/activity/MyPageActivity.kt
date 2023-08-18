@@ -13,6 +13,7 @@ import com.example.snsproject.anim.slideLeft
 import com.example.snsproject.anim.slideRight
 import com.example.snsproject.manager.MemberManager
 import com.example.snsproject.manager.MemberManagerImpl
+import de.hdodenhof.circleimageview.CircleImageView
 
 class MyPageActivity : AppCompatActivity() {
     private lateinit var memberManager : MemberManager
@@ -49,12 +50,17 @@ class MyPageActivity : AppCompatActivity() {
         val mbti = findViewById<TextView>(R.id.mypage_tv_mbti)
         val status = findViewById<TextView>(R.id.mypage_tv_status)
         val backButton = findViewById<ImageButton>(R.id.mypage_back_btn)
+        val profile = findViewById<CircleImageView>(R.id.mypage_profile_picture)
         val member = memberManager.findMember(curId)!!
 
         id.text = "ID : ${member.id}"
         name.text = "NAME : ${member.name}"
         mbti.text = "MBTI : ${member.mbti}"
         status.text = member.status
+
+        val profileImg = if (member.profileImg.isEmpty()) "blank_img" else member.profileImg
+        val profileId = resources.getIdentifier(profileImg, "drawable", packageName)
+        profile.setImageResource(profileId)
 
         backButton.setOnClickListener {
             finish()
