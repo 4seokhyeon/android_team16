@@ -57,7 +57,10 @@ class DetailPageActivity : AppCompatActivity() {
         }
 
 
+
+
         }
+
     override fun onBackPressed(){//핸드폰 뒤로가기 버튼 눌렀을 때,
 
         finish()
