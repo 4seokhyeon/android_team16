@@ -9,7 +9,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,16 +19,14 @@
 
 
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/detail_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:baselineAligned="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            >
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:baselineAligned="false"
+            android:background="@color/detail_background"
+            >
             <Button
                 android:id="@+id/detail_Undo_Btn"
                 android:layout_width="30dp"
@@ -47,19 +45,10 @@
                 android:layout_marginTop="10dp"
                 android:text="Detail"
                 android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/detail_Undo_Btn"
                 android:fontFamily="@font/bmjua"
 
                 />
-
-
-        </androidx.appcompat.widget.Toolbar>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/detail_Layout"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:baselineAligned="false"
-            android:background="@color/detail_background"
-            >
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/detail_img"
                 android:layout_margin="32dp"
@@ -90,8 +79,9 @@
 
             <TextView
                 android:id="@+id/detail_IDText"
+                android:fontFamily="@font/dongle_regular"
                 android:text="@string/Detail_IdText"
-                android:textSize="15sp"
+                android:textSize="30sp"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="100dp"
