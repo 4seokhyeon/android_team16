@@ -1,11 +1,17 @@
 # 내배캠 16조 SNS 프로젝트
 
 ### 1.PPT 자료 
-![스크린샷 2023-08-22 오후 5 25 10](https://github.com/4seokhyeon/android_team16/assets/106301222/673b38d9-854d-44cd-ad83-ceb6093d1035)
-![스크린샷 2023-08-22 오후 5 25 13](https://github.com/4seokhyeon/android_team16/assets/106301222/12d6b8ad-f3d3-48f0-94de-4011e1cc3b06)
+![스크린샷 2023-08-22 오후 5 25 10](https://github.com/4seokhyeon/android_team16/assets/106301222/bbeab0da-bfaf-4b81-8b21-c96c0472604a)
+![스크린샷 2023-08-22 오후 5 25 13](https://github.com/4seokhyeon/android_team16/assets/106301222/dcad4cda-71a5-4e6d-bceb-1c03a3d7ab94)
+
+
+
+
+
 ### 트러블 슈팅 및 프로젝트 후기 
-![스크린샷 2023-08-22 오후 5 25 19](https://github.com/4seokhyeon/android_team16/assets/106301222/2049ab82-6c11-4f55-a072-2293650f4b21)
-![스크린샷 2023-08-22 오후 5 25 21](https://github.com/4seokhyeon/android_team16/assets/106301222/7fd23e7b-5658-465a-817c-19f38750d4cd)
+![스크린샷 2023-08-22 오후 5 25 19](https://github.com/4seokhyeon/android_team16/assets/106301222/a68220c7-d7e0-4deb-bb77-7282ba9a4260)
+
+![스크린샷 2023-08-22 오후 5 25 21](https://github.com/4seokhyeon/android_team16/assets/106301222/7e85de1c-cb87-4761-a61d-4f63f511ab38)
 
 
 
